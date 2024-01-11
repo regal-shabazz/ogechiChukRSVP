@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Oge Weds Chuks"/>
+    <meta property="og:description" content="Welcome to OClovestory24!.  We're thrilled to share our wedding details with you. RSVP to join us on our special day and celebrate our love" />
+    <meta property="og:image" content="./images/logo.png" />
+    <title>OClovestory2024</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Tangerine:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/65803d9dcd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+  </head>
+  <body>
+    <div class="splash-screen">
+      <img src="./images/logo.png" alt="" id="splash-logo" />
+    </div>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="./images/navbar-logo.png" alt="" />
+        </div>
+
+        <nav>
+          <ul>
+            <li><a class="menuItem nav-link" href="./index.html">Home</a></li>
+            <li><a class="menuItem nav-link" href="./gallery-page/gallery.html">Gallery</a></li>
+            <li><a class="menuItem nav-link" href="./info-page/weddinng-info.html">Wedding Info</a></li>
+          </ul>
+        </nav>
+
+    </header>
+    <!--  -->
+
+    <main>
+      <section id="homepage">
+        <div class="container">
+          <article class="homepage-article">
+            <h1>Oge weds Chuks</h1>
+            
+            <!-- countdown -->
+            <div class="countdown">
+              <p class="in">in</p>
+              <span class="days-wrapper">
+                <div id="days" class="time">00</div>
+                <label for="days">Days</label>
+              </span>
+
+              <span class="hrs-wrapper">
+                <div id="hours" class="time">00</div>
+                <label for="hours">Hours</label>
+              </span>
+
+              <span class="min-wrapper">
+                <div id="minutes" class="time">00</div>
+                <label for="minutes">Mins</label>
+              </span>
+
+              <span class="secs-wrapper">
+                <div id="seconds" class="time">00</div>
+                <label for="seconds">Secs</label>
+              </span>
+            </div>
+          </article>
+
+          <div class="attendance-query">
+            <span id="will-you">
+              <p>Will you be attending?</p>
+
+              <div class="query-response">
+                <button id="yes">Joyfully Accept</button>
+                <button id="no">Regretfully Decline</button>
+              </div>
+            </span>
+          </div>
+
+          <div class="seat-reservation">
+            <p class="enter-your-details">Enter your details</p>
+            <form id="seat-form">
+              <input
+                type="text"
+                class="name"
+                name="first-name"
+                id="first-name"
+                placeholder="First Name"
+              />
+              <input
+                type="text"
+                class="name"
+                name="last-name"
+                placeholder="Last Name"
+                id="last-name"
+              />
+              <input
+                type="number"
+                class="name"
+                name="phone-number"
+                placeholder="Phone Number"
+                id="phone-number"
+              />
+              
+
+              <label for="sideOfFamily" class="side">Side of Family:</label>
+              <select id="sideOfFamily" name="sideOfFamily">
+               
+                <option value="">Click to Choose Side of Family</option>
+                <option value="Bride's">Family of Bride</option>
+                <option value="Groom's">Family of Groom</option>
+                <option value="Friend of Couple">Friend of Couple</option>
+              </select>
+              <button type="submit" id="get-a-seat">Submit</button>
+
+              <p>click <a id="seatchart">here</a> to see the seat chart</p>
+            </form>
+
+            <button id="close-form">Close</button>
+          </div>
+
+          <div class="access-card">
+            <div class="imgBox">
+              <img src="" alt="" id="qrImage" />
+            </div>
+          </div>
+
+          <div class="decline-message">
+            <p>
+              "We're sorry to hear that you won't be able to join us on our
+              special day. Your presence would have meant so much to us.
+              <br /><br />
+              We understand that unforeseen circumstances can arise, and we
+              truly appreciate your RSVP and consideration. <br /><br />
+              If your plans change, we would be thrilled to have you celebrate
+              with us. Wishing you all the best, and thank you for letting us
+              know." <br /><br />
+              - <span>Oge and Chuks</span> 
+            </p>
+
+            <button id="close-decline">Close</button>
+          </div>
+
+          <div class="seat-chart">
+            <span id="chart">
+              <img src="./images/oc-seat-chart.PNG" alt="" />
+
+              <h4>LEGEND</h4>
+              <p>B: Bride</p>
+              <p>G: Groom</p>
+
+              <button id="closeseatchart">close</button>
+            </span>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+    </main>
+    <footer id="thanks">
+      <div class="container">
+        <article>
+          <p>
+            Dear Beloved Guests,
+            <br />
+            As we approach our wedding day, we wanted to extend our deepest
+            gratitude to each and every one of you for your RSVP. Your response
+            has filled our hearts with joy and excitement as we eagerly
+            anticipate your presence on our special day.
+            <br />
+            <br />
+            Your support and participation mean the world to us, and we are
+            grateful for the role you will play in making our celebration truly
+            memorable. We can't wait to share this momentous occasion with you
+            and create cherished memories together.
+            <br />
+            <br />
+            We are looking forward to seeing you there as we begin this new
+            chapter in our lives.
+            <br />
+            <br />
+            With heartfelt thanks,
+            <br />
+            <span style="font-family: 'tangerine'; font-size: 4rem; color: rgb(245, 152, 152)">Oge and Chuks</span>
+          </p>
+        </article>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

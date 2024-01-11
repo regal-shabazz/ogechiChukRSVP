@@ -1,0 +1,49 @@
+main {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/splashscreen-bg-mobile.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+main .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-block: 1rem;
+}
+
+.wedding-info img {
+  width: 90%;
+  display: block;
+  margin-inline: auto;
+}
+
+.wedding-info a {
+  display: block;
+  padding: 10px;
+  background-color: rgb(246, 152, 152);
+  color: #000;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: .7rem;
+  width: 200px;
+  margin-inline: auto;
+  font-family: 'quicksand';
+  text-align: center;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  main .container {
+    padding-block: 10rem;
+  }
+
+  .wedding-info img {
+    width: 70%;
+    display: block;
+    margin-inline: auto;
+  }
+  
+}

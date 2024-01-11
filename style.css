@@ -1,0 +1,644 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cormorant Garamond", sans-serif;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Add this to your CSS file or in a <style> tag in your HTML file */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+/* splashscreen */
+.splash-screen {
+  position: absolute;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: ease 0.5s;
+  width: 100%;
+  gap: 1rem;
+  animation-name: slideLeft;
+  animation-delay: 4s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  background-image: url("./images/splashscreen-bg-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.splash-screen img {
+  width: 400px;
+  transition: ease 1s;
+  animation-name: scaleUp;
+  animation-duration: 1.5s;
+  position: absolute;
+  top: 10%;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* header */
+header {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 3px 20px #000;
+  width: 100%;
+  font-family: 'quicksand';
+  font-weight: bold;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+
+
+header .logo img {
+  width: 30px;
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+} 
+
+nav a {
+  color: #fff;
+  text-transform: uppercase;
+  transition: ease 0.4s;
+  font-size: .8rem;
+}
+
+
+/* homepage */
+main {
+  overflow: hidden;
+}
+
+#homepage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("./images/homepage-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#homepage .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.homepage-article {
+  color: #fff;
+  text-transform: capitalize;
+  padding-top: 100px;
+}
+
+/* js */
+.homepage-article.none {
+  display: none;
+}
+/* ***** */
+
+.homepage-article h1 {
+  font-size: 4rem;
+  color: rgb(246, 152, 152);
+  text-align: center;
+  font-family: 'tangerine';
+  margin-bottom: 10px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.249);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-family: 'quicksand';
+  margin-top: 200px;
+  width: 90%;
+  max-width: 500px;
+  margin-inline: auto;
+  gap: 30px;
+}
+
+.in {
+  color: rgb(246, 152, 152);
+  font-weight: bold;
+}
+
+.countdown > span {
+  gap: 0.5rem;
+}
+
+.attendance-query {
+  margin-bottom: 3rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.345);
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'tangerine';
+  font-size: 6rem;
+  width: 90%;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.attendance-query .query-response {
+  display: grid;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.attendance-query p {
+  font-size: 2.5rem;
+  color: rgb(246, 152, 152);
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.query-response button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(246, 152, 152);
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'quicksand';
+  cursor: pointer;
+}
+
+.query-response button:hover {
+  background-color: rgb(246, 152, 152);
+  color: #fff;
+}
+
+.seat-reservation {
+  background-color: rgba(0, 0, 0, 0.782);
+  margin: 0 auto;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: ease 1s;
+  width: 90%;
+} 
+
+.enter-your-details {
+  color: #fff;
+  font-family: 'quicksand';
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+#seat-form {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  
+}
+
+.name,
+#sideOfFamily,
+#get-a-seat {
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+}
+
+
+.name,
+#sideOfFamily {
+  border: none;
+  border-bottom: 1px solid rgb(246, 152, 152);
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+}
+
+.side { /* label sideoffamily */
+  display: none;
+}
+
+select {
+  color: #fff;
+}
+
+option {
+  background-color: #000;
+  padding: 1rem 0;
+}
+
+#get-a-seat {
+  border: none;
+  background-color: rgb(246, 152, 152);
+  font-family: 'quicksand';
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px;
+  color: #000;
+}
+
+#get-a-seat:hover,
+#close-form:hover {
+  background-color: rgb(241, 120, 120);
+  color: #fff;
+}
+
+#close-form {
+  margin: 0 auto 2rem;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background-color: rgb(246, 152, 152);
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px;
+  color: #000;
+}
+
+
+.access-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.601);
+  padding: 3rem 1rem;
+  border-radius: 5px;
+  display: none;
+  color: #fff;
+  word-spacing: 5px;
+  text-align: center;
+  width: 90%;
+  max-width: 1024px;
+  border-radius: 10px;
+  font-family: 'quicksand';
+}
+
+.access-card.generated {
+  display: block;
+}
+
+.imgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.access-card p:nth-child(3) {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: rgb(244, 116, 116);
+}
+
+
+.access-card button,
+#closeseatchart {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background-color: rgb(246, 152, 152);
+  margin-top: 2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+#closeseatchart:hover,
+.access-card button:hover,
+.decline-message button:hover {
+  background-color: rgb(246, 152, 152);
+  color: #fff;
+}
+
+.decline-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.62);
+  line-height: 1.6;
+  padding: 2rem;
+  width: 90%;
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.2rem;
+  display: none;
+  color: #fff;
+  font-family: 'quicksand';
+  border-radius: 10px;
+}
+
+.decline-message span {
+  color: rgb(246, 152, 152);
+  font-family: 'tangerine';
+  font-size: 3rem;
+}
+
+.decline-message button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background-color: rgb(246, 152, 152);
+  margin-top: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.decline-message.show {
+  display: block;
+}
+
+.seat-chart {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  width: 100%;
+  max-width: 1024px;
+  transition: ease 0.5s;
+  opacity: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+#closeseatchart {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.seat-chart.pop {
+  display: block;
+  opacity: 1;
+}
+
+#chart {
+  text-align: center;
+}
+
+.seat-chart img {
+  width: 100%;
+}
+
+#seat-form p {
+  color: #fff;
+}
+
+#seat-form a {
+  color: rgb(246, 152, 152);
+  cursor: pointer;
+}
+
+/* for javascript */
+ .attendance-query.n-display {
+  display: none;
+}
+/* ***** */
+
+
+/* for javascript */
+.seat-reservation.pop-out {
+  max-height: 100%;
+  opacity: 1;
+}
+/* ******** */
+
+
+
+/* footer */
+
+footer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/thank-you-page-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  font-family: 'quicksand';
+}
+
+footer .container {
+  min-height: 100vh;
+
+  padding: 6rem 0 4rem;
+  line-height: 1.7;
+ display: flex;
+ justify-content: center;
+ align-items: center ;
+}
+
+footer article {
+  background-color: rgba(0, 0, 0, 0.281);
+  border-radius: 10px;
+  padding: 20px;
+
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .splash-screen {
+    background-image: url("./images/splashscreen-bg.jpg");
+  }
+
+  .splash-screen img {
+    top: -10%;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    color: rgb(246, 152, 152);
+  }
+
+  #homepage {
+    padding-top: 1rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url("./images/homepage-bg-desktop.jpg");
+    background-size: cover;
+    background-position-y: 80%;
+    background-color: #fff;
+  }
+
+  .homepage-article h3 {
+    padding: 0;
+  }
+
+  .homepage-article h1 {
+    font-size: 8rem;
+  }
+
+  .countdown {
+    margin-top: 100px;
+  }
+
+  .attendance-query {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.attendance-query .query-response {
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  gap: .5rem;
+}
+
+.attendance-query p {
+  font-size: 3rem;
+  color: rgb(246, 152, 152);
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.query-response button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(246, 152, 152);
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "quicksand", sans-serif;
+  cursor: pointer;
+}
+
+
+.query-response button:hover {
+  color: #fff;
+  background-color: rgb(246, 152, 152);
+}
+
+ 
+  /* rsvp */
+
+  .seat-reservation {
+    width: 50%;
+  }
+
+  #seat-form {
+    padding: 5rem 2rem;
+    gap: 4rem;
+  }
+
+  #get-a-seat {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .seat-chart img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  footer {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("./images/thank-you-page-bg.jpg");
+    background-position-y: 20%;
+    background-size: cover;
+  }
+
+  footer .container {
+
+    font-size: 1.5rem;
+  }
+
+  footer article {
+    width: 60%;
+    margin-inline: auto;
+  }
+}
