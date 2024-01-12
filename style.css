@@ -405,12 +405,12 @@ option {
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.62);
   line-height: 1.6;
-  padding: 2rem;
+  padding: 20px;
   width: 90%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 2rem auto;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: none;
   color: #fff;
   font-family: 'quicksand';
@@ -420,7 +420,7 @@ option {
 .decline-message span {
   color: rgb(246, 152, 152);
   font-family: 'tangerine';
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .decline-message button {
@@ -431,6 +431,7 @@ option {
   cursor: pointer;
   font-weight: bold;
   border-radius: 10px;
+  color: #000
 }
 
 .decline-message.show {
