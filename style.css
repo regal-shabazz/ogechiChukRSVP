@@ -235,7 +235,7 @@ main {
   font-weight: 900;
 }
 
-.query-response button {
+/* .query-response button {
   padding: 0.5rem 1.5rem;
   border: none;
   border-radius: 5px;
@@ -245,11 +245,28 @@ main {
   font-size: 1rem;
   font-family: 'quicksand';
   cursor: pointer;
+} */
+
+.query-response button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(246, 152, 152, 0);
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'quicksand';
+  cursor: pointer;
 }
 
-.query-response button:hover {
+/* .query-response button:hover {
   background-color: rgb(246, 152, 152);
   color: #fff;
+} */
+
+.query-response button:hover {
+  background-color: rgba(246, 152, 152, 0);
+  color: #ffffff00;
 }
 
 .seat-reservation {
