@@ -123,7 +123,7 @@ getASeat.addEventListener('submit', (e) => {
 
   // spreadsheet
 
-  fetch('https://script.google.com/macros/s/AKfycbwMUK990chh_DIx5p53GiK0ZgUp_jmi3KDerv_Dfxi8jiGhS9cxQXiJnxquEJC6be98/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbwMUK990chh_DIx5p53GiK0ZgUp_jmi3KDerv_Dfxi8jiGhS9cxQXiJnxquEJC6be98/exec?sheet=sheet2', {
     method: 'POST',
     mode: 'no-cors',
     headers: {
